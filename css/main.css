@@ -64,6 +64,7 @@ section > p{
   text-align: center;
   display:flex;
   overflow: hidden;
+  position: relative;
 }
 .swiper-slide{
   width:100%;
