@@ -13,20 +13,20 @@ main{
 #mintro > article{position:absolute;}
 
 #intro{
-  height:923px;
-  background-color:#0f0;
+  height:862px;
+  position: relative;
 }
 #test{
-  height:869px;
-  background-color:cyan;
+  width:1200px;
+  margin:0px auto;
+  padding:160px 0px 180px 0px;
 }
 #event{
   height:750px;
-  background-color:darkturquoise;
+  background-color:#F4F4F4;
 }
 #buy{
-  height:1781px;
-  background-color:gold;
+  padding:50px 0px;
 }
 #cs{
   height:1165px;
