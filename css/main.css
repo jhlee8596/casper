@@ -267,10 +267,10 @@ section > p {
 }
 
 .btn01 {
-  border: none;
-  background-color: #212772;
   color: #fff;
   line-height: 30px;
+  border: none;
+  background-color: #212772;
   width: 200px;
 }
 
@@ -520,12 +520,16 @@ section > p {
 }
 
 .btn02 {
-  background-color: #212772;
   color: #fff;
-  width: 150px;
   line-height: 30px;
   border: none;
+  background-color: #212772;
+  width: 150px;
 }
 
 /* 랜덤 이벤트 이미지 */
+.e_banner {
+  width: 1200px;
+  margin: 0px auto;
+}
 /*# sourceMappingURL=main.css.map */

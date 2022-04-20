@@ -13,10 +13,17 @@ $bg_color1: rgb(33,39,114);
 $color2:#fff;
 $l_height:30px;
 $border2:none;
+$width:1200px;
+$margin:0px auto;
+
+@mixin b_center{
+  width:$width;
+  margin:$margin;
+}
 
 @mixin more{
   font-size: $fsize;
-  border:$border;
+  border:$border1;
   padding:$padding;
   transition:$transition;
 }
@@ -32,7 +39,7 @@ $border2:none;
 @mixin btn{
   color:$color2;
   line-height:$l_height;
-  border:$border;
+  border:$border2;
   background-color: $bg_color1;
 }
 
