@@ -1,15 +1,39 @@
 @charset "utf-8";
 
 $fsize:16px;
-$border:1px solid #333;
+$border1:1px solid #333;
 $padding:8px 20px;
 $transition:0.5s;
+$pos_ab:absolute;
+$left:50%;
+$transform:translateX(-50%);
+$color1:rgb(0,132,255);
+$display:block;
+$bg_color1: rgb(33,39,114);
+$color2:#fff;
+$l_height:30px;
+$border2:none;
 
 @mixin more{
   font-size: $fsize;
   border:$border;
   padding:$padding;
   transition:$transition;
+}
+@mixin pos{
+  left:$left;
+  transform: $transform;
+}
+@mixin link{
+  color:$color1;
+  line-height: $l_height;
+  display:$display;
+}
+@mixin btn{
+  color:$color2;
+  line-height:$l_height;
+  border:$border;
+  background-color: $bg_color1;
 }
 
 /* 캐스퍼 인트로 영상 */
@@ -183,8 +207,7 @@ section > p{
 }
 #intro > a{
   bottom:70px;
-  left:50%;
-  transform: translateX(-50%);
+  @include pos;
 }
 #intro .more{
   @include more;
@@ -229,10 +252,7 @@ section > p{
   line-height:40px;
 }
 .btn01{
-  border:none;
-  background-color:rgb(33,39,114);
-  color:#fff;
-  line-height: 30px;
+  @include btn;
   width:200px;
 }
 .t_box > a{
@@ -359,9 +379,7 @@ section > p{
   font-size:16px;
 }
 .link01{
-  color:rgb(0,132,255);
-  line-height:30px;
-  display:block;
+  @include link;
 }
 .link01::after{
   content: " >";
@@ -420,23 +438,18 @@ section > p{
 #cs ul > li > input[type=button]{
   position:absolute;
   bottom:20px;
-  left:50%;
-  transform: translateX(-50%);
+  @include pos;
 }
 #cs ul > li > img{
   display:block;
   margin:10px auto;
 }
 .btn02{
-  background-color: rgb(33,39,114);
-  color:#fff;
+  @include btn;
   width:150px;
-  line-height:30px;
-  border:none;
 }
 
 /* 랜덤 이벤트 이미지 */
 .e_banner{
-  width:1200px;
-  margin:0px auto;
+  @include b_center;
 }
