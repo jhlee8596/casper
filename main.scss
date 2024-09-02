@@ -1,0 +1,462 @@
+@charset "utf-8";
+
+$fsize:16px;
+$border1:1px solid #333;
+$padding:8px 20px;
+$transition:0.5s;
+$pos_ab:absolute;
+$left:50%;
+$transform:translateX(-50%);
+$color1:rgb(0,132,255);
+$display:block;
+$bg_color1: rgb(33,39,114);
+$color2:#fff;
+$l_height:30px;
+$border2:none;
+$width:1200px;
+$margin:0px auto;
+
+@mixin b_center{
+  width:$width;
+  margin:$margin;
+}
+
+@mixin more{
+  font-size: $fsize;
+  border:$border1;
+  padding:$padding;
+  transition:$transition;
+}
+@mixin pos{
+  left:$left;
+  transform: $transform;
+}
+@mixin link{
+  color:$color1;
+  line-height: $l_height;
+  display:$display;
+}
+@mixin btn{
+  color:$color2;
+  line-height:$l_height;
+  border:$border2;
+  background-color: $bg_color1;
+}
+
+/* 캐스퍼 인트로 영상 */
+#mintro article{
+  width:100%;
+  top:50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color:#fff;
+  z-index:100;
+}
+
+#mintro article > h3{
+  font-size:60px;
+  font-weight: bold;
+}
+#mintro article > p{
+  line-height:80px;
+  font-size:16px;
+}
+#mintro article > a{
+  color:#fff;
+  font-size:14px;
+  text-decoration: underline;
+  margin:0px 20px;
+  padding:5px 10px;
+}
+#mintro article > a:first-of-type{
+  background-color: rgb(0,110,255);
+}
+
+/* 아래로 이동하기 버튼 */
+#next_btn{
+  position:absolute;
+  bottom:40px;
+  left: 50%;
+  transform: translateY(-50%);
+  display:inline-block;
+  width:30px;
+  height:30px;
+  border-right:1px solid #fff;
+  border-bottom:1px solid #fff;
+  transform: rotate(45deg);
+  text-indent: -9999px;
+}
+
+/* 메인 타이틀 서식 */
+section > h2{
+  font-size:34px;
+  text-align: center;
+  padding:80px 0px 10px 0px;
+  font-weight:bold;
+  color:#000;
+}
+section > p{
+  text-align:center;
+  line-height:60px;
+  font-size:16px;
+}
+
+/* top3 서식 */
+.top3{
+  padding:40px 0px;
+  text-align: center;
+  display:flex;
+  overflow: hidden;
+  position: relative;
+}
+.top3 .swiper-button-next, .top3 .swiper-button-prev{
+  position:absolute;
+}
+.top3 .swiper-button-next{
+  font-size:1.6rem;
+  right:10% !important;
+  z-index:1000 !important;
+}
+.top3 .swiper-button-prev{
+  font-size:1.6rem;
+  left:10% !important;
+}
+.top3 .swiper-pagination2{
+  position:absolute;
+  bottom: -100px;
+}
+.swiper-slide{
+  width:100%;
+}
+.top3 img{
+  padding:30px 0px;
+}
+.top3 .order em{
+  color:rgb(17, 150, 106);
+  border:1px solid rgb(17, 150, 106);
+  padding:6px 20px;
+  border-radius: 30px;
+}
+.order .title{
+  padding-top:20px;
+  display:block;
+  font-size:20px;
+  color:rgb(21,113,252);
+}
+.detail > ul{
+  display:flex;
+  justify-content: center;
+  padding-bottom:60px;
+}
+.detail > ul > li{
+  width:240px;
+  border-right:1px solid #ccc;
+  padding:0px 20px;
+  font-size:16px;
+  line-height: 20px;
+}
+.detail > ul > li:last-child{
+  border:none;
+}
+.out_color, .inner_color{
+  display: inline-block;
+  width:56px;
+  height:46px;
+}
+.out_color{
+  background-color: rgb(244,250,168);
+  float: left;
+}
+.inner_color{
+  background-color: rgb(66,66,66);
+  float: left;
+}
+.price{
+  font-size:32px;
+  font-weight:bold;
+}
+.price2{
+  font-size:16px;
+  line-height:50px;
+  border:1px solid #333;
+  padding:6px 40px;
+  transition: 0.5s;
+}
+.price2:hover, .more:hover{
+  background-color:#333;
+  color:#fff;
+}
+/* 소개페이지 서식 */
+#intro > h2, #intro > strong, #intro > a{
+  position:absolute;
+  z-index:10;
+}
+#intro img{
+  width:100%;
+}
+#intro > h2{
+  width:100%;
+  text-align: center;
+}
+#intro > strong{
+  font-size:24px;
+  font-weight: bold;
+  line-height: 30px;
+}
+.l_title{
+  left:80px;
+  top:30%;
+}
+.r_title{
+  right:80px;
+  bottom:35%;
+  text-align: right;
+}
+#intro > a{
+  bottom:70px;
+  @include pos;
+}
+#intro .more{
+  @include more;
+}
+
+/* 시승신청 서식 */
+.p01{
+  font-weight:bold;
+  font-size:14px;
+  line-height:20px;
+  padding:15px 0px;
+}
+.p02{
+  position:absolute;
+  width:100%;
+  bottom:-30px;
+  text-align: center;
+}
+.t_box{
+  width:460px;
+  height:300px;
+  border:1px solid #ccc;
+  padding:15px;
+  margin-top:50px;
+  text-align:center;
+  box-sizing: border-box;
+  position:relative;
+}
+.t_box:first-of-type{
+  float:left;
+  margin-left:90px;
+  padding-top:33px;
+}
+.t_box:last-of-type{
+  float:right;
+  margin-right:90px;
+  padding-top:60px;
+}
+.t_box > h3{
+  font-size:24px;
+  font-weight:bold;
+  line-height:40px;
+}
+.btn01{
+  @include btn;
+  width:200px;
+}
+.t_box > a{
+  color:rgb(0,132,255);
+  line-height:50px;
+}
+.t_box > a::after{
+  content: " >";
+  color:#333;
+}
+
+/* event 서식 */
+
+.event_s{
+  width:1200px;
+  margin:0px auto;
+  overflow: hidden;
+  position: relative;
+}
+.event_s .swiper-button-next, .event_s .swiper-button-prev{
+  position:absolute;
+  color:#333;
+}
+.event_s .swiper-button-next{
+  font-size:1.6rem;
+  right:5px !important;
+  z-index:1000 !important;
+}
+.event_s .swiper-button-prev{
+  font-size:1.6rem;
+  left:5px !important;
+}
+.event_s .swiper-pagination3{
+  text-align: center;
+}
+.swiper-pagination3 span{
+  background-color: #333;
+}
+.event_s .swiper-slide{
+  width:100%;
+}
+.event_s img{
+  padding:30px 0px;
+}
+
+/* 구매안내 서식 */
+#buy{
+  text-align: center;
+}
+#buy h3{
+  font-size:24px;
+  text-align:center;
+  padding:60px 0px 50px 0px;
+  font-weight:bold;
+}
+#buy ul{
+  width:1000px;
+  margin:30px auto;
+  display:flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.t_color01{
+  color:#00729C;
+}
+#buy ul > li{
+  width:30%;
+  margin-bottom:60px;
+}
+#buy ul > li > h4{
+  font-size:16px;
+  font-weight:bold;
+}
+#buy ul > li > img{
+  width:80px;
+  height:60px;
+  padding:15px 0px;
+}
+#buy ul > li > .p03{
+  line-height:20px;
+}
+
+#buy iframe{
+  border:none;
+  width:1000px;
+  height:600px;
+}
+
+/* 고객지원 서식 */
+#cs h2{
+  margin-bottom:40px;
+}
+#cs article{
+  background-color:#fff;
+  width:1200px;
+  margin:0px auto;
+  padding-bottom:40px;
+}
+.clear::after{
+  display:block;
+  clear: both;
+  content:"";
+}
+#cs h3{
+  font-size:18px;
+  text-align:center;
+  font-weight: bold;
+  padding:60px 0px 50px 0px;
+}
+.ars_left, .ars_right{
+  width:50%;
+  float:left;
+  padding:20px 30px;
+  box-sizing: border-box;
+  display:flex;
+  justify-content: center;
+}
+.cs_p{
+  text-align:center;
+  padding:0px 40px;
+}
+.cs_p strong{
+  font-weight:500;
+  font-size:16px;
+}
+.link01{
+  @include link;
+}
+.link01::after{
+  content: " >";
+  color:rgb(0,132,255);
+}
+.car, .card{
+  display:inline-block;
+  width:75px;
+  height:46px;
+  background-image: url('../images/counsel_img.png');
+  text-indent:-9999px;
+}
+.card{
+  background-position:-80px 0px;
+  width:70px;
+}
+#cs dl > dt{
+  font-weight: bold;
+}
+#cs dl > dd{
+  color:rgb(109, 109, 109);
+  line-height: 22px;
+}
+#cs ul{
+  display:flex;
+  justify-content: space-between;
+  width:1200px;
+  margin:20px auto;
+}
+#cs ul > li{
+  background-color:#fff;
+  width:290px;
+  height:280px;
+  padding:30px 55px 10px 55px;
+  box-sizing: border-box;
+  position:relative;
+}
+#cs ul > li > h4{
+  text-align: left;
+  font-size:16px;
+  font-weight:bold;
+  padding-bottom:30px;
+}
+#cs ul > li > p{
+  line-height: 26px;
+  font-weight:bold;
+}
+#cs ul > li > span{
+  color:#666;
+  line-height: 20px;
+}
+.link_box{text-align: center;}
+.link_box a{
+  display:inline-block
+}
+#cs ul > li > input[type=button]{
+  position:absolute;
+  bottom:20px;
+  @include pos;
+}
+#cs ul > li > img{
+  display:block;
+  margin:10px auto;
+}
+.btn02{
+  @include btn;
+  width:150px;
+}
+
+/* 랜덤 이벤트 이미지 */
+.e_banner{
+  @include b_center;
+}

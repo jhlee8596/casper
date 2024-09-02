@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,8 +21,8 @@
   <!-- 메인 서식 -->
   <link href="./css/main.css" rel="stylesheet" type="text/css">
 
- <!-- 폰트어썸 주소 -->
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- 폰트어썸 주소 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <!-- 벤더프리픽스 -->
   <script src="./script/prefixfree.min.js"></script>
@@ -32,8 +33,9 @@
   <script defer src="./script/main.js"></script>
 
   <script src="./script/jquery.cookie.js"></script>
-  
+
 </head>
+
 <body>
   <!-- 상단 헤더영역 시작 -->
   <header>
@@ -167,7 +169,7 @@
       <div class="t_box">
         <h3>현대자동차 드라이빙 라운지 <br> / CASPER STUDIO 시승</h3>
         <p class="p01">드라이빙 라운지와 CASPER STUDIO에서 <br>
-        캐스퍼를 체험해보세요.
+          캐스퍼를 체험해보세요.
         </p>
         <input type="button" value="시승 신청하기" class="btn01">
         <br><a href="text.html" title="시승신청조회">시승 신청조회</a>
@@ -253,7 +255,9 @@
           <p class="p03">밤 10시까지 캐스퍼 고객센터(080-500-6000)를 통해 문의사항을 해결할 수 있고, 현대자동차의 직영서비스센터와 블루핸즈도 이용할 수 있습니다.</p>
         </li>
       </ul>
-      <iframe src="https://www.youtube.com/embed/MQSGzDRejUM?controls=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/MQSGzDRejUM?controls=0" title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
     </section>
 
     <!-- 고객지원 영역 -->
@@ -316,7 +320,7 @@
           <p>현대자동차 멤버십과 차량 장비/점검, 카라이프 서비스까지 모두 마이 현대로 정리하세요.</p>
           <img src="./images/app.png" alt="현대 app">
           <div class="link_box">
-            <a href="link6.html" title="IOS" class="link01">IOS</a> 
+            <a href="link6.html" title="IOS" class="link01">IOS</a>
             &nbsp;&nbsp;&nbsp;
             <a href="link7.html" title="Android" class="link01">Android</a>
           </div>
@@ -362,42 +366,42 @@
       </address>
     </div>
   </footer>
-  
+
 
   <!-- 아크틱 스크롤  -->
   <script src="./script/jquery.arctic_scroll.js"></script>
   <!-- 스와이퍼 슬라이드 -->
   <script src="./script/swiper.js"></script>
   <script>
-    $(function(){
+    $(function () {
       $(".arctic_scroll").arctic_scroll({
-          speed: 800
+        speed: 800
       });
     });
 
     let top3 = new Swiper('.top3', {
-      navigation:{
-        nextEl : ".swiper-button-next",
-        prevEl : ".swiper-button-prev",
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
       },
-      pagination : {
-          el:".swiper-pagination",
-          clickable: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
       }
     });
 
     let event = new Swiper('.event_s', {
-      autoplay:{
-        delay:3000,
-        disableOnInteraction:false,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
       },
-      navigation:{
-        nextEl : ".swiper-button-next",
-        prevEl : ".swiper-button-prev",
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
       },
-      pagination : {
-          el:".swiper-pagination3",
-          clickable: true,
+      pagination: {
+        el: ".swiper-pagination3",
+        clickable: true,
       }
     });
 
@@ -410,9 +414,9 @@
     // document.getElementById('eb').src="./images/banner0"+random+".jpg";
 
     // 2. 제이쿼리 문법
-    $(document).ready(function(){
-      let random = Math.floor(Math.random()*2+1);
-      $('#eb').attr('src','./images/banner0'+random+'.jpg');
+    $(document).ready(function () {
+      let random = Math.floor(Math.random() * 2 + 1);
+      $('#eb').attr('src', './images/banner0' + random + '.jpg');
     });
 
     // 모달
@@ -421,8 +425,10 @@
         <div class="m_box">
           <img src="./images/notice.jpg" alt="modal">
           <div class="btn_box">
-            <input type="checkbox" id=ch><label for="ch">오늘하루 열지 않음</label>
-            <input type="button" value="닫기" id="c_btn">
+            <div class="chk_wrap">
+              <input type="checkbox" class="chk_btn" id="ch"><label for="ch">오늘하루 열지 않음</label>
+            </div>
+            <input type="button" value="닫기" id="c_btn" class="c_btn">
           </div>
         </div>  
       </div>
@@ -433,24 +439,25 @@
     // 쿠키 스크립트
 
     // 1. 현재 브라우저에 쿠키파일이 있다면 모달창이 나오지 않게한다.
-    if($.cookie('popup')=='none'){
+    if ($.cookie('popup') == 'none') {
       $('.modal').fadeOut()();
     }
 
     // 2. 체크박스에 체크하고 닫기를 누르면 쿠키가 생성되고 모달창이 닫힌다.
     let $ex = $('#ch'); // 체크박스 변수
 
-    function closeModal(){
-      if($ex.is(":checked")){
-        $.cookie('popup','none',{expires:1, path:'/'}); // 쿠키파일 생성
+    function closeModal() {
+      if ($ex.is(":checked")) {
+        $.cookie('popup', 'none', { expires: 1, path: '/' }); // 쿠키파일 생성
       }
       $('.modal').fadeOut(); // 모달 숨기기
     }
 
     // 그냥 닫기 버튼을 눌렀을 때
-    $('#c_btn').click(function(){
+    $('#c_btn').click(function () {
       closeModal();
     });
   </script>
 </body>
+
 </html>
